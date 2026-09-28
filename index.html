@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Fix — Prevención y corrección para un mundo conectado</title>
+  <meta name="description" content="Mantenimiento preventivo y supervisión 24/7 de tus sistemas y dispositivos IoT. Detectamos fallas antes de que ocurran." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ══════════ NAV ══════════ -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-brand">
+      <div class="nav-logo">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <circle cx="8" cy="8" r="3" fill="#00d4ff"/>
+          <circle cx="8" cy="8" r="6" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+          <path d="M8 1v2M8 13v2M1 8h2M13 8h2" stroke="#00d4ff" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <span class="nav-brand-text">Smart<span class="accent-cyan">Fix</span></span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Cómo funciona</a>
+      <a href="#demo">Métricas</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+
+    <a href="#contacto" class="btn btn-outline nav-cta">Contactar</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#servicios">Servicios</a>
+    <a href="#proceso">Cómo funciona</a>
+    <a href="#demo">Métricas</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+
+  <!-- ══════════ HERO ══════════ -->
+  <section id="hero" class="hero">
+    <div class="hero-glow"></div>
+
+    <div class="hero-content container">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          Sistema activo — 247 dispositivos en línea
+        </div>
+
+        <h1 class="hero-title">
+          Prevención y corrección
+          <span class="gradient-text"> para un mundo conectado</span>
+        </h1>
+
+        <p class="hero-desc">
+          Mantenimiento preventivo y supervisión 24/7 de tus sistemas y dispositivos IoT. Detectamos fallas antes de que ocurran.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contacto" class="btn btn-primary">Solicitar demo gratuita</a>
+          <a href="#servicios" class="btn btn-ghost">
+            Ver servicios
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="hero-mini-stats">
+          <div>
+            <div class="mini-stat-value">99.9%</div>
+            <div class="mini-stat-label">Uptime SLA</div>
+          </div>
+          <div>
+            <div class="mini-stat-value">&lt;30s</div>
+            <div class="mini-stat-label">Resp. alertas</div>
+          </div>
+          <div>
+            <div class="mini-stat-value">24/7</div>
+            <div class="mini-stat-label">Soporte</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel de control -->
+      <div class="hero-panel-wrap">
+        <div class="hero-panel">
+          <div class="panel-header">
+            <div class="panel-header-left">
+              <span class="status-dot status-online"></span>
+              <span class="mono-tag">CONTROL CENTER</span>
+            </div>
+            <span class="live-clock" id="liveClock">00:00:00 UTC-3</span>
+          </div>
+
+          <div class="metrics-grid">
+            <div class="metric-row">
+              <div class="metric-head">
+                <span class="mono-tag">CPU</span>
+                <span class="metric-value" style="color: #00d4ff">34%</span>
+              </div>
+              <div class="metric-track"><div class="metric-fill" style="width: 34%; background: #00d4ff"></div></div>
+            </div>
+            <div class="metric-row">
+              <div class="metric-head">
+                <span class="mono-tag">RAM</span>
+                <span class="metric-value" style="color: #00d4ff">61%</span>
+              </div>
+              <div class="metric-track"><div class="metric-fill" style="width: 61%; background: #00d4ff"></div></div>
+            </div>
+            <div class="metric-row">
+              <div class="metric-head">
+                <span class="mono-tag">TEMP</span>
+                <span class="metric-value" style="color: #f59e0b">47°C</span>
+              </div>
+              <div class="metric-track"><div class="metric-fill" style="width: 47%; background: #f59e0b"></div></div>
+            </div>
+            <div class="metric-row">
+              <div class="metric-head">
+                <span class="mono-tag">RED</span>
+                <span class="metric-value" style="color: #00d4ff">12ms</span>
+              </div>
+              <div class="metric-track"><div class="metric-fill" style="width: 12%; background: #00d4ff"></div></div>
+            </div>
+          </div>
+
+          <div class="panel-devices">
+            <div class="panel-devices-title mono-tag">DISPOSITIVOS ACTIVOS</div>
+
+            <div class="device-row">
+              <div class="device-left">
+                <span class="status-dot status-online"></span>
+                <div>
+                  <div class="device-name">Gateway Principal</div>
+                  <div class="device-meta">GW-001 · Planta Norte</div>
+                </div>
+              </div>
+              <span class="device-uptime" style="color: #00e5a0">99.97%</span>
+            </div>
+
+            <div class="device-row">
+              <div class="device-left">
+                <span class="status-dot status-online"></span>
+                <div>
+                  <div class="device-name">Sensor Temperatura</div>
+                  <div class="device-meta">SNS-014 · Sala Calderas</div>
+                </div>
+              </div>
+              <span class="device-uptime" style="color: #00e5a0">99.81%</span>
+            </div>
+
+            <div class="device-row">
+              <div class="device-left">
+                <span class="status-dot status-warn"></span>
+                <div>
+                  <div class="device-name">Sensor Presión</div>
+                  <div class="device-meta">SNS-028 · Línea B</div>
+                </div>
+              </div>
+              <span class="device-uptime" style="color: #f59e0b">97.40%</span>
+            </div>
+
+            <div class="device-row">
+              <div class="device-left">
+                <span class="status-dot status-online"></span>
+                <div>
+                  <div class="device-name">Actuador Válvula</div>
+                  <div class="device-meta">ACT-007 · Depósito A</div>
+                </div>
+              </div>
+              <span class="device-uptime" style="color: #00e5a0">99.99%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══════════ STATS BAND ══════════ -->
+  <section class="stats-band">
+    <div class="container stats-band-inner">
+      <div><div class="stat-band-value">99.9%</div><div class="stat-band-label">Disponibilidad garantizada</div></div>
+      <div><div class="stat-band-value">&lt;30s</div><div class="stat-band-label">Tiempo de respuesta ante alertas</div></div>
+      <div><div class="stat-band-value">200+</div><div class="stat-band-label">Dispositivos gestionados</div></div>
+      <div><div class="stat-band-value">24/7</div><div class="stat-band-label">Soporte continuo</div></div>
+    </div>
+  </section>
+
+  <!-- ══════════ MISIÓN & VISIÓN ══════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-mono-tag" style="color: #00e5a0">// QUIÉNES SOMOS</div>
+
+      <div class="mv-grid">
+        <!-- Misión -->
+        <div class="mv-card">
+          <div class="mv-card-bar" style="background: linear-gradient(90deg, #00d4ff, #00e5a0)"></div>
+          <div class="mv-head">
+            <div class="mv-icon" style="background: #00d4ff10; border-color: #00d4ff30">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="3" fill="#00d4ff"/>
+                <circle cx="10" cy="10" r="7" stroke="#00d4ff" stroke-width="1.2" stroke-dasharray="3 2"/>
+                <path d="M10 1v3M10 16v3M1 10h3M16 10h3" stroke="#00d4ff" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="mv-tag" style="color: #00d4ff">MISIÓN</span>
+          </div>
+          <h3 class="mv-title">Smart Fix: Mantenimiento y Monitoreo Inteligente</h3>
+          <p class="mv-text">
+            La empresa Smart Fix se encarga de realizar mantenimiento preventivo y correctivo de sistemas y dispositivos IoT, también realiza monitoreo de los dispositivos en tiempo real para asegurar el buen funcionamiento y control de los dispositivos, y garantizar la eficiencia, seguridad e integración de estos mismos.
+          </p>
+          <div class="mv-tags">
+            <span class="mv-pill" style="background: #00d4ff0d; border-color: #00d4ff20; color: #00d4ff">Mantenimiento 🔧</span>
+            <span class="mv-pill" style="background: #00d4ff0d; border-color: #00d4ff20; color: #00d4ff">Monitoreo 📡</span>
+            <span class="mv-pill" style="background: #00d4ff0d; border-color: #00d4ff20; color: #00d4ff">Seguridad</span>
+          </div>
+        </div>
+
+        <!-- Visión -->
+        <div class="mv-card">
+          <div class="mv-card-bar" style="background: linear-gradient(90deg, #00e5a0, #f59e0b)"></div>
+          <div class="mv-head">
+            <div class="mv-icon" style="background: #00e5a010; border-color: #00e5a030">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10 2l2 5h5l-4 3 1.5 5L10 12l-4.5 3L7 10 3 7h5L10 2z" stroke="#00e5a0" stroke-width="1.2" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span class="mv-tag" style="color: #00e5a0">VISIÓN</span>
+          </div>
+          <h3 class="mv-title">Smart Fix 2030: Innovación y Tecnología Inteligente</h3>
+          <p class="mv-text">
+            Para el año 2030 la empresa Smart Fix será reconocida como líder en soluciones tecnológicas en IoT, reconocida por su innovación y credibilidad, calidad en el monitoreo y mantenimiento de dispositivos inteligentes. Buscamos expandir nuestros servicios a nivel nacional, ofreciendo tecnología segura, eficiente y accesible que contribuya al desarrollo digital de empresas y hogares, garantizando siempre la satisfacción y confianza de nuestros clientes.
+          </p>
+          <div class="mv-tags">
+            <span class="mv-pill" style="background: #00e5a00d; border-color: #00e5a020; color: #00e5a0">Seguridad</span>
+            <span class="mv-pill" style="background: #00e5a00d; border-color: #00e5a020; color: #00e5a0">Innovación</span>
+            <span class="mv-pill" style="background: #00e5a00d; border-color: #00e5a020; color: #00e5a0">Expansión</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ SERVICIOS ══════════ -->
+  <section id="servicios" class="section">
+    <div class="container">
+      <div class="section-mono-tag" style="color: #00d4ff">// SERVICIOS</div>
+      <h2 class="section-title">
+        Todo lo que necesitas para<br />
+        <span class="accent-cyan">proteger tu infraestructura</span>
+      </h2>
+
+      <div class="services-grid" id="servicesGrid">
+        <!-- Se genera desde JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PROCESO ══════════ -->
+  <section id="proceso" class="section section-navy">
+    <div class="container">
+      <div class="section-mono-tag" style="color: #00e5a0">// PROCESO</div>
+      <h2 class="section-title">Cómo funciona</h2>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <div class="step-dot-wrap"><div class="step-dot"></div></div>
+          <h3 class="step-title">Diagnóstico y Conexión</h3>
+          <p class="step-desc">Relevamos tu infraestructura, identificamos dispositivos y protocolos. Configuramos agentes de monitoreo sin interrumpir operaciones.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <div class="step-dot-wrap"><div class="step-dot"></div></div>
+          <h3 class="step-title">Configuración de Alertas</h3>
+          <p class="step-desc">Definimos umbrales, reglas de escalamiento y canales de notificación según la criticidad de cada activo y tus SLAs.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <div class="step-dot-wrap"><div class="step-dot"></div></div>
+          <h3 class="step-title">Monitoreo Activo</h3>
+          <p class="step-desc">Nuestro equipo supervisa 24/7 con herramientas automatizadas. Intervención remota inmediata ante cualquier anomalía detectada.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <div class="step-dot-wrap"><div class="step-dot"></div></div>
+          <h3 class="step-title">Reportes y Mejora Continua</h3>
+          <p class="step-desc">Informes mensuales de disponibilidad, incidentes y recomendaciones. Optimización continua basada en datos históricos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ DEMO / DASHBOARD ══════════ -->
+  <section id="demo" class="section">
+    <div class="container">
+      <div class="section-mono-tag" style="color: #f59e0b">// DEMO EN VIVO</div>
+      <h2 class="section-title">
+        Panel de control en <span class="accent-cyan">tiempo real</span>
+      </h2>
+      <p class="section-desc">
+        Vista representativa del dashboard que gestionamos para nuestros clientes.
+      </p>
+
+      <div class="dashboard">
+        <div class="dash-header">
+          <div class="dash-header-left">
+            <span class="status-dot status-online"></span>
+            <span class="mono-tag">FLEET MANAGER v2.4.1</span>
+          </div>
+          <div class="dash-header-right">
+            <span class="pill pill-success">4/5 online</span>
+            <span class="live-clock" id="liveClockDash">00:00:00 UTC-3</span>
+          </div>
+        </div>
+
+        <div class="dash-table-wrap">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>ESTADO</th>
+                <th>ID</th>
+                <th>DISPOSITIVO</th>
+                <th>UBICACIÓN</th>
+                <th>UPTIME</th>
+                <th>ÚLTIMA SEÑAL</th>
+              </tr>
+            </thead>
+            <tbody id="dashTbody"></tbody>
+          </table>
+        </div>
+
+        <div class="dash-alert-wrap">
+          <div class="dash-alert">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M8 2l6 12H2L8 2z" stroke="#f59e0b" stroke-width="1.2" stroke-linejoin="round"/>
+              <path d="M8 6v3M8 11v1" stroke="#f59e0b" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+            <span class="mono-tag alert-text">ALERTA · SNS-028 — Temperatura fuera de rango normal (47°C). Umbral configurado: 45°C.</span>
+            <span class="mono-tag" style="color: #6b7fa0; margin-left: auto">hace 2 min</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CONTACTO ══════════ -->
+  <section id="contacto" class="section section-navy">
+    <div class="container contact-grid">
+      <div>
+        <div class="section-mono-tag" style="color: #00d4ff">// CONTACTO</div>
+        <h2 class="section-title">
+          ¿Listo para proteger<br />
+          <span class="accent-cyan">tu infraestructura?</span>
+        </h2>
+        <p class="section-desc">
+          Cuéntanos sobre tus sistemas IoT y te proponemos una solución de monitoreo adaptada a tu operación. Primera consulta sin cargo.
+        </p>
+
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-icon">📡</span>
+            <div>
+              <div class="contact-value">smartfixsas@gmail.com</div>
+              <div class="contact-sub">Respuesta en menos de 4h hábiles</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div>
+              <div class="contact-value">+57 3043987055</div>
+              <div class="contact-sub">Lunes a Sábado, de 8 a 18 hrs</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <div class="contact-value">Tabio, Cundinamarca</div>
+              <div class="contact-sub">Colombia</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-card">
+        <form class="contact-form" id="contactForm">
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="nombre">NOMBRE</label>
+              <input type="text" id="nombre" placeholder="Juan Pérez" required />
+            </div>
+            <div class="form-group">
+              <label for="email">EMAIL</label>
+              <input type="email" id="email" placeholder="juan@empresa.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="empresa">EMPRESA</label>
+            <input type="text" id="empresa" placeholder="Nombre de tu empresa" />
+          </div>
+          <div class="form-group">
+            <label for="mensaje">MENSAJE</label>
+            <textarea id="mensaje" rows="4" placeholder="Cuéntanos sobre tu infraestructura IoT..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Enviar mensaje</button>
+        </form>
+
+        <div class="contact-success" id="contactSuccess" hidden>
+          <div class="success-circle">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <path d="M5 14l7 7 11-11" stroke="#00e5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p class="success-title">Mensaje enviado</p>
+          <p class="success-sub">Te contactaremos en menos de 24h</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo" style="width: 24px; height: 24px;">
+          <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
+            <circle cx="8" cy="8" r="3" fill="#00d4ff"/>
+            <circle cx="8" cy="8" r="6" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+          </svg>
+        </div>
+        <span class="footer-brand-text">Smart<span class="accent-cyan">Fix</span></span>
+      </div>
+
+      <div class="footer-copy mono-tag">
+        © 2026 IoTWatch · Monitoreo remoto de sistemas IoT
+      </div>
+
+      <div class="footer-links">
+        <a href="#">Privacidad</a>
+        <a href="#">Términos</a>
+        <a href="#">SLA</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
